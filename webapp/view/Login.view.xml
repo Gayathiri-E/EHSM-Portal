@@ -1,0 +1,21 @@
+<mvc:View controllerName="ehsm.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true">
+    <Page id="loginPage" title="{i18n>appTitle}" showHeader="false">
+        <content>
+            <l:Grid defaultSpan="L12 M12 S12" class="sapUiMediumMarginTop">
+                <l:content>
+                    <VBox justifyContent="Center" alignItems="Center" class="sapUiLargeMarginTop">
+                        <Title text="{i18n>loginTitle}" level="H2" class="sapUiSmallMarginBottom"/>
+                        <Input id="userId" placeholder="{i18n>userIdPlaceholder}" width="300px" class="sapUiSmallMarginBottom"/>
+                        <Input id="password" placeholder="{i18n>passwordPlaceholder}" type="Password" width="300px" class="sapUiSmallMarginBottom"/>
+                        <Button text="{i18n>loginButton}" type="Emphasized" width="300px" press="onLoginPress"/>
+                    </VBox>
+                </l:content>
+            </l:Grid>
+        </content>
+    </Page>
+</mvc:View>

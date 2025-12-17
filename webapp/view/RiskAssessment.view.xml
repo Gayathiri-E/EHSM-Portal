@@ -1,0 +1,37 @@
+<mvc:View controllerName="ehsm.controller.RiskAssessment"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="riskPage" title="{i18n>riskTitle}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Table id="riskTable" items="{/Z777_RISK}" growing="true" growingThreshold="10">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="{i18n>riskTableTitle}" level="H2"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column><Text text="{i18n>colRiskRef}" /></Column>
+                    <Column><Text text="{i18n>colTeamMember}" /></Column>
+                    <Column><Text text="{i18n>colRole}" /></Column>
+                    <Column><Text text="{i18n>colRegulation}" /></Column>
+                    <Column><Text text="{i18n>colRegulationUrl}" /></Column>
+                    <Column><Text text="{i18n>colCreatedOn}" /></Column>
+                    <Column><Text text="{i18n>colCreatedBy}" /></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{RiskKeyRef}"/>
+                            <Text text="{TeamMember}"/>
+                            <Text text="{Role}"/>
+                            <Text text="{Regulation}"/>
+                            <Link text="{RegulationURL}" href="{RegulationURL}" target="_blank"/>
+                            <Text text="{path: 'CreatedOn', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' }}" />
+                            <Text text="{CreatedBy}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

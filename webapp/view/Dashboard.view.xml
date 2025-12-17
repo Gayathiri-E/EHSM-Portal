@@ -1,0 +1,24 @@
+<mvc:View controllerName="ehsm.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page id="dashboardPage" title="{i18n>dashboardTitle}" showNavButton="false">
+        <headerContent>
+            <Button icon="sap-icon://log" press="onLogoutPress" tooltip="{i18n>logoutTooltip}"/>
+        </headerContent>
+        <content>
+            <l:VerticalLayout class="sapUiMediumMargin">
+                <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>incidentTileTitle}" subheader="{i18n>incidentTileSub}" press="onPressIncident">
+                    <TileContent unit="{i18n>incidentTileUnit}" footer="{i18n>incidentTileFooter}">
+                        <ImageContent src="sap-icon://alert" />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>riskTileTitle}" subheader="{i18n>riskTileSub}" press="onPressRisk">
+                    <TileContent unit="{i18n>riskTileUnit}" footer="{i18n>riskTileFooter}">
+                        <ImageContent src="sap-icon://shield" />
+                    </TileContent>
+                </GenericTile>
+            </l:VerticalLayout>
+        </content>
+    </Page>
+</mvc:View>

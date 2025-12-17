@@ -1,0 +1,42 @@
+<mvc:View controllerName="ehsm.controller.IncidentManagement"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="incidentPage" title="{i18n>incidentTitle}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Table id="incidentTable" items="{/Z777_INCIDENT}" growing="true" growingThreshold="10">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="{i18n>incidentTableTitle}" level="H2"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column><Text text="{i18n>colIncidentID}" /></Column>
+                    <Column><Text text="{i18n>colTitle}" /></Column>
+                    <Column><Text text="{i18n>colCategory}" /></Column>
+                    <Column><Text text="{i18n>colStatus}" /></Column>
+                    <Column><Text text="{i18n>colGroup}" /></Column>
+                    <Column><Text text="{i18n>colPlant}" /></Column>
+                    <Column><Text text="{i18n>colLocation}" /></Column>
+                    <Column><Text text="{i18n>colCreatedOn}" /></Column>
+                    <Column><Text text="{i18n>colCreatedBy}" /></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{IncidentID}"/>
+                            <Text text="{Title}"/>
+                            <Text text="{IncidentCategory}"/>
+                            <ObjectStatus text="{IncidentRecordStatus}" 
+                                state="{path: 'IncidentRecordStatus', formatter: '.formatter.statusState'}" />
+                            <Text text="{IncidentGroup}"/>
+                            <Text text="{PlantID}"/>
+                            <Text text="{Location}"/>
+                            <Text text="{path: 'CreatedOn', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' }}" />
+                            <Text text="{CreatedBy}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

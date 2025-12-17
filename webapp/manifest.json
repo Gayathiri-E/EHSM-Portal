@@ -101,28 +101,71 @@
     "routing": {
       "config": {
         "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "ehsm.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "transition": "slide",
-        "type": "View",
-        "viewType": "XML",
-        "path": "ehsm.view",
-        "async": true,
-        "viewPath": "ehsm.view"
+        "clearControlAggregation": false
       },
       "routes": [
         {
-          "name": "Routeapp",
-          "pattern": ":?query:",
+          "name": "RouteLogin",
+          "pattern": "",
           "target": [
-            "Targetapp"
+            "TargetLogin"
+          ]
+        },
+        {
+          "name": "RouteDashboard",
+          "pattern": "dashboard",
+          "target": [
+            "TargetDashboard"
+          ]
+        },
+        {
+          "name": "RouteIncidentManagement",
+          "pattern": "incident-management",
+          "target": [
+            "TargetIncidentManagement"
+          ]
+        },
+        {
+          "name": "RouteRiskAssessment",
+          "pattern": "risk-assessment",
+          "target": [
+            "TargetRiskAssessment"
           ]
         }
       ],
       "targets": {
-        "Targetapp": {
-          "id": "app",
-          "name": "app"
+        "TargetLogin": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Login",
+          "viewName": "Login"
+        },
+        "TargetDashboard": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Dashboard",
+          "viewName": "Dashboard"
+        },
+        "TargetIncidentManagement": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "IncidentManagement",
+          "viewName": "IncidentManagement"
+        },
+        "TargetRiskAssessment": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "RiskAssessment",
+          "viewName": "RiskAssessment"
         }
       }
     },
