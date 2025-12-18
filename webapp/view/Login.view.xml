@@ -1,4 +1,4 @@
-<mvc:View controllerName="ehsm.controller.Login"
+<!-- <mvc:View controllerName="ehsm.controller.Login"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
@@ -16,6 +16,88 @@
                     </VBox>
                 </l:content>
             </l:Grid>
+        </content>
+    </Page>
+</mvc:View> -->
+
+<mvc:View
+    controllerName="ehsm.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    displayBlock="true">
+
+    <Page id="loginPage" showHeader="false" backgroundDesign="Transparent">
+        <content>
+            <VBox
+                width="100%"
+                height="100%"
+                justifyContent="Center"
+                alignItems="Center">
+
+                <!-- Login Card -->
+                <Panel
+                    width="360px"
+                    class="sapUiMediumMargin"
+                    backgroundDesign="Translucent">
+
+                    <content>
+
+                        <VBox alignItems="Center">
+
+                            <!-- Icon -->
+                            <Avatar
+                                icon="sap-icon://shield"
+                                displaySize="L"
+                                backgroundColor="Accent6"
+                                class="sapUiMediumMarginBottom"/>
+
+                            <!-- Title -->
+                            <Title
+                                text="EHSM Portal Login"
+                                level="H2"
+                                class="sapUiSmallMarginBottom"/>
+
+                            <Text
+                                text="Secure Safety Engineer Access"
+                                class="sapUiTinyMarginBottom"
+                                wrapping="true"/>
+
+                            <!-- User ID -->
+                            <VBox width="100%" class="sapUiMediumMarginTop">
+                                <Label text="User ID" labelFor="userId"/>
+                                <Input
+                                    id="userId"
+                                    placeholder="Enter User ID"
+                                    width="100%"
+                                    valueLiveUpdate="true"/>
+                            </VBox>
+
+                            <!-- Password -->
+                            <VBox width="100%" class="sapUiSmallMarginTop">
+                                <Label text="Password" labelFor="password"/>
+                                <Input
+                                    id="password"
+                                    type="Password"
+                                    placeholder="Enter Password"
+                                    width="100%"/>
+                            </VBox>
+
+                            <!-- Login Button -->
+                            <Button
+                                text="Login"
+                                icon="sap-icon://log"
+                                type="Emphasized"
+                                width="100%"
+                                class="sapUiMediumMarginTop"
+                                press="onLoginPress"/>
+
+                        </VBox>
+
+                    </content>
+                </Panel>
+
+            </VBox>
         </content>
     </Page>
 </mvc:View>

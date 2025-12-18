@@ -1,4 +1,4 @@
-<mvc:View controllerName="ehsm.controller.Dashboard"
+<!-- <mvc:View controllerName="ehsm.controller.Dashboard"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout">
@@ -19,6 +19,101 @@
                     </TileContent>
                 </GenericTile>
             </l:VerticalLayout>
+        </content>
+    </Page>
+</mvc:View> -->
+
+
+<mvc:View
+    controllerName="ehsm.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+
+    <Page id="dashboardPage" showNavButton="false">
+
+        <!-- Custom Header -->
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Title text="EHSM Safety Engineer Dashboard" level="H2"/>
+                </contentLeft>
+                <contentRight>
+                    <Button
+                        icon="sap-icon://log"
+                        text="Logout"
+                        type="Transparent"
+                        press="onLogoutPress"
+                        tooltip="{i18n>logoutTooltip}"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+
+        <content>
+            <VBox
+                width="100%"
+                height="100%"
+                justifyContent="Center"
+                alignItems="Center"
+                class="sapUiLargeMarginTop">
+
+                <!-- Dashboard Card -->
+                <Panel
+                    width="600px"
+                    backgroundDesign="Translucent"
+                    class="sapUiMediumMargin">
+
+                    <content>
+                        <VBox alignItems="Center">
+
+                            <!-- Dashboard Subtitle -->
+                            <Text
+                                text="Select a module to continue"
+                                class="sapUiSmallMarginBottom"/>
+
+                            <!-- Tiles Row -->
+                            <HBox
+                                justifyContent="Center"
+                                wrap="Wrap"
+                                class="sapUiMediumMarginTop">
+
+                                <!-- Incident Management Tile -->
+                                <GenericTile
+                                    class="sapUiTinyMargin tileLayout"
+                                    header="{i18n>incidentTileTitle}"
+                                    subheader="{i18n>incidentTileSub}"
+                                    press="onPressIncident"
+                                    frameType="OneByOne">
+
+                                    <TileContent
+                                        unit="{i18n>incidentTileUnit}"
+                                        footer="{i18n>incidentTileFooter}">
+                                        <ImageContent src="sap-icon://alert"/>
+                                    </TileContent>
+                                </GenericTile>
+
+                                <!-- Risk Assessment Tile -->
+                                <GenericTile
+                                    class="sapUiTinyMargin tileLayout"
+                                    header="{i18n>riskTileTitle}"
+                                    subheader="{i18n>riskTileSub}"
+                                    press="onPressRisk"
+                                    frameType="OneByOne">
+
+                                    <TileContent
+                                        unit="{i18n>riskTileUnit}"
+                                        footer="{i18n>riskTileFooter}">
+                                        <ImageContent src="sap-icon://shield"/>
+                                    </TileContent>
+                                </GenericTile>
+
+                            </HBox>
+
+                        </VBox>
+                    </content>
+                </Panel>
+
+            </VBox>
         </content>
     </Page>
 </mvc:View>
