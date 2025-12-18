@@ -12,7 +12,7 @@
                         <Title text="{i18n>loginTitle}" level="H2" class="sapUiSmallMarginBottom"/>
                         <Input id="userId" placeholder="{i18n>userIdPlaceholder}" width="300px" class="sapUiSmallMarginBottom"/>
                         <Input id="password" placeholder="{i18n>passwordPlaceholder}" type="Password" width="300px" class="sapUiSmallMarginBottom"/>
-                        <Button text="{i18n>loginButton}" type="Emphasized" width="300px" press="onLoginPress"/>
+                        <Button text="{i18n>login}" type="Emphasized" width="300px" press="onLoginPress"/>
                     </VBox>
                 </l:content>
             </l:Grid>
